@@ -1,8 +1,8 @@
-import React, { useState, useRef } from "react";
+import React, { useState } from "react";
 import * as XLSX from "xlsx";
 import { saveAs } from "file-saver";
 
-const removeUnicodeCharacters = (str) => str.replace(/[^\x00-\x7F]/g, '');
+const removeUnicodeCharacters = (str) => str.replace(/[^\u0000-\u007F]/g, '');
 const trimLeadingSpaces = (str) => str.replace(/^\s+/, '');
 
 const style = `
